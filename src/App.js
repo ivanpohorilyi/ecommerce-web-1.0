@@ -1,13 +1,65 @@
+import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Items from "./components/Items";
 
-function App() {
-  return (
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      items: [
+        {
+          id: 1,
+          title: 'Yamaha',
+          img: 'scooter-5.jpg',
+          desc: 'Lorem1 ipsum dolor sit amaet, berofto da sit',
+          category: 'Yamaha',
+          price: '30000'
+        },
+        {
+          id: 2,
+          title: 'Yamaha JOG 50',
+          img: 'scooter-5.jpg',
+          desc: 'Lorem1 ipsum dolor sit amaet, berofto da sit',
+          category: 'Yamaha',
+          price: '35000'
+        },
+        {
+          id: 3,
+          title: 'Yamaha BWS',
+          img: 'scooter-5.jpg',
+          desc: 'Lorem1 ipsum dolor sit amaet, berofto da sit',
+          category: 'Yamaha',
+          price: '31000'
+        },
+        {
+          id: 4,
+          title: 'Suzuki GSX-R 600',
+          img: 'scooter-5.jpg',
+          desc: 'Lorem1 ipsum dolor sit amaet, berofto da sit',
+          category: 'Suzuki',
+          price: '37500'
+        },
+        {
+          id: 5,
+          title: 'Kawasaki Zx6r',
+          img: 'scooter-5.jpg',
+          desc: 'Lorem1 ipsum dolor sit amaet, berofto da sit',
+          category: 'Kawasaki',
+          price: '55400'
+        },
+      ]
+    }
+  }
+  render() {
+   return (
     <div className="wrapper">
       <Header />
+      <Items items={this.state.items}/>
       <Footer />
     </div>
   );
+  }
 }
 
 export default App;
