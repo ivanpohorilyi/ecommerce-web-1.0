@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Items from "./components/Items";
 import Categories from "./components/Categories";
 import ShowFullItem from "./components/ShowFullItem";
-
+// commentary
 class App extends React.Component {
   constructor(props) {
     super(props)
